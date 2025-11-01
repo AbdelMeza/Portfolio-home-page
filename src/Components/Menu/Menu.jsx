@@ -5,24 +5,24 @@ export default function Menu({ menuStatu, statu, localTime }) {
         <div className={`menu-container ${statu ? "opened" : "closed"}`}>
             <div className="tile-container">
                 <div className="tile" style={{ transitionDelay: `${0.05 * 1}s` }}></div>
-                <div className="tile" style={{ transitionDelay: `${0.05 * 2}s` }}></div>
                 <div className="tile" style={{ transitionDelay: `${0.05 * 3}s` }}></div>
-                <div className="tile" style={{ transitionDelay: `${0.05 * 4}s` }}></div>
+                <div className="tile" style={{ transitionDelay: `${0.05 * 5}s` }}></div>
+                <div className="tile" style={{ transitionDelay: `${0.05 * 7}s` }}></div>
             </div>
             <div className="content">
                 <div className="upper-content">
                     <div className="navigation-link-wrapper -bt-ff -xl-fs -mt-tc">
                         <div className="navigation-link-container">
-                            <a href="/about" style={{ '--delay': `${0.05 * 3}s` }}>About</a>
+                            <a href="/about" style={{ '--delay': `${0.05 * 2}s` }}>About</a>
                         </div>
                         <div className="navigation-link-container">
                             <a href="/work" style={{ '--delay': `${0.05 * 4}s` }}>Work</a>
                         </div>
                         <div className="navigation-link-container">
-                            <a href="/services" style={{ '--delay': `${0.05 * 5}s` }}>Services</a>
+                            <a href="/services" style={{ '--delay': `${0.05 * 6}s` }}>Services</a>
                         </div>
                         <div className="navigation-link-container">
-                            <a href="/contact" style={{ '--delay': `${0.05 * 6}s` }}>Contact</a>
+                            <a href="/contact" style={{ '--delay': `${0.05 * 8}s` }}>Contact</a>
                         </div>
 
                     </div>

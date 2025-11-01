@@ -5,7 +5,7 @@ export default function NavBar({ localTime }) {
         <nav className="navbar -pad-container -mt-ff-r -s-fs">
             <div className="content">
                 <a href="" className="main-link -mt-ff-b -mt-tc">Abdelhak</a>
-                <img src="./src/assets/icons/icon/abdelhak-icon.png" alt="" width={20}/>
+                <img src="https://i.imgur.com/7rFjtDf_d.png?maxwidth=520&shape=thumb&fidelity=high" alt="" width={20}/>
             </div>
             <div className="content">
                 <div className="infos">

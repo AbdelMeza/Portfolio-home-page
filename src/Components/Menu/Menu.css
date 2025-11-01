@@ -50,9 +50,11 @@
 
             >.navigation-link-wrapper {
                 display: flex;
-                gap: 5vw;
+                justify-content: space-around;
+                width: 100%;
 
                 .navigation-link-container {
+                    width: max-content;
                     overflow: hidden;
 
                     & a {
