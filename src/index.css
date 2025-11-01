@@ -1,0 +1,119 @@
+@font-face {
+  font-family: "Main Font Regular";
+  src: url("../Font/main-font/main-font-regular.otf") format("opentype");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Main Font Bold";
+  src: url("../Font/main-font/main-font-bold.otf") format("opentype");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Big Font";
+  src: url("../Font/big-t-font/big-text-font.ttf") format("truetype");
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Secondary Font";
+  src: url("../Font/secondary-font/secondary-font.ttf") format("truetype");
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-height: 100vh;
+  background-color: var(--light-background-color);
+}
+
+:root {
+  --main-font-regular: "Main Font Regular";
+  --main-font-bold: "Main Font Bold";
+  --secondary-font: "Secondary font";
+  --big-text-font: "Big font";
+
+  --small-text-size: 0.5rem;
+  --medium-text-size: 0.8rem;
+  --big-text-size: clamp(60px, 8vw, 100vw);
+  --section-text-size: clamp(20vw, 22vw, 100vw);
+
+  --animation-easing: cubic-bezier(0.75, 0, 0.25, 1);
+  --animation-long-duration: 600ms;
+  --animation-short-duration: 300ms;
+
+  --main-text-color: #222;
+  --main-color: #ff4e3a;
+  --light-background-color: #D3D1CD;;
+  
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  text-transform: uppercase;
+  list-style: none;
+  color: inherit;
+}
+
+a, button{
+  cursor: pointer;
+}
+
+html {
+  font-size: 30px;
+}
+
+.-mt-ff-r{
+  font-family: var(--main-font-regular);
+}.-mt-ff-b{
+  font-family: var(--main-font-bold);
+}.-st-ff{
+  font-family: "Secondary Font";
+}.-bt-ff{
+  font-family: "Big Font";
+}
+
+.-mt-tc{
+  color: var(--main-text-color);
+} .-st-tc{
+  color: var(--main-text-color);
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}.-st-hover:hover{
+  opacity: 0.8;
+}
+
+.-s-fs {
+  font-size: var(--small-text-size);
+}.-m-fs {
+  font-size: var(--medium-text-size);
+}.-xl-fs {
+  font-size: var(--big-text-size);
+}.-xxl-fs {
+  font-size: var(--section-text-size);
+}
+
+.-pad-1 {
+  padding: 0 10px;
+}.-pad-2 {
+  padding: 0 15px;
+}.-pad-container {
+  padding: 0 30px;
+}
