@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './Menu.css'
 
 export default function Menu({ menuStatu, statu, localTime }) {
@@ -13,16 +14,16 @@ export default function Menu({ menuStatu, statu, localTime }) {
                 <div className="upper-content">
                     <div className="navigation-link-wrapper -bt-ff -xl-fs -mt-tc">
                         <div className="navigation-link-container">
-                            <a href="/about" style={{ '--delay': `${0.05 * 2}s` }}>About</a>
+                            <Link to="/about" style={{ '--delay': `${0.05 * 6}s` }} onClick={() => menuStatu(!statu)}>About</Link>
                         </div>
                         <div className="navigation-link-container">
-                            <a href="/work" style={{ '--delay': `${0.05 * 4}s` }}>Work</a>
+                            <a href="#" style={{ '--delay': `${0.05 * 7}s` }} onClick={() => menuStatu(!statu)}>Work</a>
                         </div>
                         <div className="navigation-link-container">
-                            <a href="/services" style={{ '--delay': `${0.05 * 6}s` }}>Services</a>
+                            <a href="#" style={{ '--delay': `${0.05 * 8}s` }} onClick={() => menuStatu(!statu)}>Services</a>
                         </div>
                         <div className="navigation-link-container">
-                            <a href="/contact" style={{ '--delay': `${0.05 * 8}s` }}>Contact</a>
+                            <a href="#" style={{ '--delay': `${0.05 * 9}s` }} onClick={() => menuStatu(!statu)}>Contact</a>
                         </div>
 
                     </div>

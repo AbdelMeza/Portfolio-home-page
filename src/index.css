@@ -32,7 +32,6 @@ body {
   padding: 0;
   box-sizing: border-box;
   min-height: 100vh;
-  background-color: var(--light-background-color);
 }
 
 :root {
@@ -46,13 +45,14 @@ body {
   --big-text-size: clamp(60px, 8vw, 100vw);
   --section-text-size: clamp(20vw, 22vw, 100vw);
 
-  --animation-easing: cubic-bezier(0.75, 0, 0.25, 1);
-  --animation-long-duration: 600ms;
-  --animation-short-duration: 300ms;
+  --animation-easing: cubic-bezier(.25, 1, 0.1, 1);
+  --animation-long-duration: 1s;
+  --animation-short-duration: 400ms;
 
   --main-text-color: #222;
   --main-color: #ff4e3a;
-  --light-background-color: #D3D1CD;;
+  --light-background-color: #D3D1CD;
+  --dark-background-color: #212121;
   
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -100,9 +100,9 @@ html {
 } .-st-tc{
   color: var(--main-text-color);
   opacity: 0.6;
-  transition: opacity 0.2s;
+  transition: opacity var(--animation-long-duration);
 }.-st-hover:hover{
-  opacity: 0.8;
+  opacity: 1;
 }
 
 .-s-fs {

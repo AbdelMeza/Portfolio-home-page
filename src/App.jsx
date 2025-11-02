@@ -1,27 +1,22 @@
 import { useEffect, useState } from 'react'
 import './App.css'
-import BodyContent from './Components/BodyContent/BodyContent.jsx'
+import HomePage from './Pages/HomePage/HomePage'
+import AboutPage from './Pages/AboutPage/AboutPage'
+import Menu from './Components/Menu/Menu'
+import { createHashRouter, RouterProvider } from 'react-router-dom'
 
 export default function App() {
   const getTime = () => {
     const time = new Date()
-    const options = {
-      timeZone: 'Africa/Algiers',
-      hour: '2-digit',
-      minute: '2-digit',
-      second: '2-digit'
-    }
+    const options = { timeZone: 'Africa/Algiers', hour: '2-digit', minute: '2-digit', second: '2-digit' }
 
-    const timeInAlgeria = time.toLocaleTimeString('fr-DZ', options)
-    return timeInAlgeria
+    return time.toLocaleTimeString('fr-DZ', options)
   }
 
   const [localTime, setLocalTime] = useState(getTime())
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setLocalTime(getTime())
-    }, 1000)
+    const interval = setInterval(() => setLocalTime(getTime()), 1000)
 
     return () => clearInterval(interval)
   }, [])
@@ -32,10 +27,20 @@ export default function App() {
     setStatu(statu)
   }
 
-  return (
+  const homePage = <HomePage localTime={localTime} menuStatu={menuStatu} statu={statu} />
+  const aboutPage = <AboutPage localTime={localTime} menuStatu={menuStatu} statu={statu} />
+  const router = createHashRouter([
+    { path: '/', element: homePage },
+    { path: '/about', element: aboutPage }, {
+      basename: '/Portfolio-home-page',
+    }
+  ])
 
+  return (
     <>
-      <BodyContent localTime={localTime} menuStatu={menuStatu} statu={statu} />
+      <RouterProvider router={router} />
+      <Menu menuStatu={menuStatu} statu={statu} localTime={localTime} />
     </>
   )
 }
+

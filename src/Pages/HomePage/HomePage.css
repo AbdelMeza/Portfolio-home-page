@@ -5,12 +5,13 @@
     display: flex;
     align-items: end;
     justify-content: center;
+    background-color: var(--light-background-color);
+    transition: transform var(--animation-long-duration);
     overflow: hidden;
 
     >.bg-block {
         position: absolute;
         pointer-events: none;
-        z-index: -1;
 
         &.vertical {
             height: 100%;
@@ -30,11 +31,11 @@
         }
     }
 
-    >.section-title {
+    >.home-content .section-title {
         line-height: 0.7;
     }
 
-    >.title-slider {
+    >.home-content .title-slider {
         display: none;
         justify-content: start;
         width: 100%;
@@ -53,12 +54,12 @@
 
     }
 
-    @media screen and (max-width: 650px) {
-        >.section-title {
+    @media screen and (max-width: 600px) {
+        >.home-content .section-title {
             display: none;
         }
 
-        >.title-slider {
+        >.home-content .title-slider {
             display: flex;
         }
     }

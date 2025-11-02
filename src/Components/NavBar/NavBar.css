@@ -2,10 +2,10 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    padding: 30px;
     display: flex;
     justify-content: space-between;
+    width: 100%;
+    padding: 30px;
     z-index: 10;
 
     >.content {
@@ -17,10 +17,6 @@
 
         &:nth-child(1){
             gap: 13vw;
-        }
-
-        >a {
-            height: max-content;
         }
 
         >.infos {
